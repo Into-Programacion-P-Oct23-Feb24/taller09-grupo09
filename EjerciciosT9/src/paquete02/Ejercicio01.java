@@ -42,19 +42,18 @@ public class Ejercicio01 {
                         if ((respuesta >= 16) && (respuesta <=20)){
                             valoresRangos[3] = valoresRangos[3] + 1;//1+1
                         }
-        // el error esta en que en la condicional esta usando || en vez de &&
+        /* el error esta en que en la condicional esta usando || en vez de &&,
+           esto quiere decir que si hacemos uso del || (or) lo que se ejecuta es
+           si al menos una de las condiciones es verdadera, en cambio si hacemos
+           && lo que se ejecuta es solo si todas las condiciones son verdaderas
+         */
                     }
                 }
-                
             }
         }
-        
-        
         for (int i = 0; i < rangos.length; i++) {
             System.out.printf("Rango %s - valor %d\n", rangos[i],
                     valoresRangos[i]);
         }
-        
     }
-    
 }

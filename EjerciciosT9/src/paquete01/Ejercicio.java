@@ -1,36 +1,39 @@
 package paquete01;
 
 import java.util.Scanner;
+import java.util.Locale;
 
 public class Ejercicio {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        String[] marcas;
-        int nMarcas;
-        int i;
-        String nombre;
+        entrada.useLocale(Locale.US);
+
+        int n;
+        String marca;
         String ac = "";
-        System.out.println("Digite el numero de marcas que desee ingresar");
-        nMarcas = entrada.nextInt();
+
+        System.out.println("Ingrese la cantidad de marcas");
+        n = entrada.nextInt();
         entrada.nextLine();
-        marcas = new String[nMarcas];
-        for (i = 0; i < nMarcas; i++) {
-            System.out.println("Ingrese el nombre de la marca");
-            nombre = entrada.nextLine();
-            String inicial = nombre.substring(0);
-            if (inicial.equals("A") || inicial.equals("C")
+        String[] vehiculos = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Ingrese la marca del vehiculo");
+            marca = entrada.nextLine();
+            String inicial = marca.substring(0, 1).toUpperCase();
+            if (inicial.equals("C") || inicial.equals("A")
                     || inicial.equals("T")) {
-                System.out.println("El nombre no debe comenzar con las letras "
-                        + "A, C o T");
-                i --;
+                System.out.println("Ingrese una marca que no empiecen con las "
+                        + "letras A, C, T.");
+                i = i - 1;
             } else {
-                marcas[i] = nombre;
+                vehiculos[i] = marca;
+                ac = String.format("%s\n%s",
+                        ac, vehiculos[i]);
             }
+
         }
-        for (i = 0; i < nMarcas; i++) {
-            ac = String.format("%s%s\n", ac, marcas[i]);
-        }
-        System.out.printf("%s", ac);
+        System.out.printf("%s\n", ac);
     }
 }

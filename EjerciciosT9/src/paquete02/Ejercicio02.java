@@ -18,7 +18,8 @@ public class Ejercicio02 {
         // TODO code application logic here
         int[] respuestas = {1, 10, 11, 12, 12, 13, 16, 17, 18, 8, 9, 10, 21,
             -1, 100, 200, 2, 21, 22, 27};
-        String[] rangos = {"1-5", "6-10", "11-15", "16-20", "Fuera de Rango"};
+        String[] fuera_de_rango = {"1-5", "6-10", "11-15", "16-20", "Fuera de "
+            + "Rango"};
         int[] valoresRangos = new int[5]; // {0, 0, 0, 0, 0}
         int respuesta;
         for (int i = 0; i < respuestas.length; i++) {
@@ -41,8 +42,8 @@ public class Ejercicio02 {
                 }
             }
         }
-        for (int i = 0; i < rangos.length; i++) {
-            System.out.printf("Rango %s - valor %d\n", rangos[i],
+        for (int i = 0; i < fuera_de_rango.length; i++) {
+            System.out.printf("Rango %s - valor %d\n", fuera_de_rango[i],
                     valoresRangos[i]);
         }
     }
