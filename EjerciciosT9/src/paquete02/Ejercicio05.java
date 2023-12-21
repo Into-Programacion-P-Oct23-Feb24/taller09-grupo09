@@ -26,21 +26,18 @@ public class Ejercicio05 {
         String[] estudiantes = {"Kimberly", "Hogan", "Teresa", "Luis", "Mark",
             "Jennifer", "Alcides"};
         String inicial;
+        String inicialLetra;
         boolean bandera = true;
         while (bandera) {
             System.out.println("Ingrese una letra");
-            inicial = entrada.nextLine().toUpperCase();
-            switch (inicial) {
-                case ("K"):
-                case ("H"):
-                case ("T"):
-                case ("L"):
-                case ("M"):
-                case ("J"):
-                case ("A"):
+            inicial = entrada.nextLine();
+            for (int i = 0; i < estudiantes.length; i++){
+                inicialLetra = estudiantes[i];
+                inicialLetra = inicialLetra.toLowerCase();
+                String iniciall = inicialLetra.substring(0,1);
+                if (iniciall.equals(inicial)){
                     bandera = false;
-                    break;
-                default:
+                }
             }
         }
     }
