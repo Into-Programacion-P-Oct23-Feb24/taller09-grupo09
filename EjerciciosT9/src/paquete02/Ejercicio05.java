@@ -33,10 +33,6 @@ public class Ejercicio05 {
             while (bandera) {
                 System.out.println("Ingrese una letra");
                 inicial = entrada.nextLine().toUpperCase();
-                /* hicimos un ciclo repetitivo, que mientras no se ingrese 
-                ninguna de las letras presentadas en el switch case
-                siga preguntando por una letra, ya que si una letra coincide 
-                con el case, bandera pasa a ser false y rompe el ciclo*/
                 switch (inicial) {
                     case ("K"):
                     case ("H"):
