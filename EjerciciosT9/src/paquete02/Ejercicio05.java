@@ -22,28 +22,20 @@ public class Ejercicio05 {
         usted debe revisar y entender lo desarrollado
         en el archivo Ayuda01.java del paquete2
          */
-       Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         String[] estudiantes = {"Kimberly", "Hogan",
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
-        String inicial;
-        char inicialLetra;
+        char inicial;
+        String primer;
         boolean bandera = true;
         while (bandera) {
-            while (bandera) {
-                System.out.println("Ingrese una letra");
-                inicial = entrada.nextLine().toUpperCase();
-                switch (inicial) {
-                    case ("K"):
-                    case ("H"):
-                    case ("T"):
-                    case ("L"):
-                    case ("M"):
-                    case ("J"):
-                    case ("A"):
-                        bandera = false;
-                        break;
-                    default:
+            System.out.println("Ingrese una letra");
+            inicial = entrada.nextLine().toUpperCase().charAt(0);
+            for (int i = 0; i < estudiantes.length; i++) {
+                primer = estudiantes[i].substring(0);
+                if (primer.startsWith(String.valueOf(inicial))) {
+                    bandera = false;
                 }
             }
         }
