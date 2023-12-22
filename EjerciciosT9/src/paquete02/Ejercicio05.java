@@ -27,6 +27,7 @@ public class Ejercicio05 {
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
         String inicial;
+<<<<<<< HEAD
         char inicialLetra;
         boolean bandera = true;
         while (bandera) {
@@ -44,6 +45,19 @@ public class Ejercicio05 {
                         bandera = false;
                         break;
                     default:
+=======
+        String inicialLetra;
+        boolean bandera = true;
+        while (bandera) {
+            System.out.println("Ingrese una letra");
+            inicial = entrada.nextLine();
+            for (int i = 0; i < estudiantes.length; i++){
+                inicialLetra = estudiantes[i];
+                inicialLetra = inicialLetra.toLowerCase();
+                String iniciall = inicialLetra.substring(0,1);
+                if (iniciall.equals(inicial)){
+                    bandera = false;
+>>>>>>> 1e2eea29dbb0ee8d7c445d7f83022c336687928b
                 }
             }
         }
